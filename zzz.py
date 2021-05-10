@@ -27,9 +27,9 @@ logger = logger.opt(colors=True)
 import nest_asyncio
 nest_asyncio.apply()
 
-TAG = 'zz1'
-TOKEN = "3fb6c0ce7a1a75933adbdab09b43745e998dc1a1d713c4873fe52f5e1e883a27"
-KEY = '/Users/const/.ssh/kusanagi'
+TAG = os.getenv('ZZZTAG')
+TOKEN = os.getenv('ZZZTOKEN')
+KEY = os.getenv('ZZZKEY')
 
 def parse_config():
     parser = argparse.ArgumentParser(description="zz1", usage="zz1 <command> <command args>", add_help=True)
