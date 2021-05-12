@@ -68,21 +68,21 @@ def parse_config():
     wallet_parser.add_argument("--hotkeys", type=str, nargs='*', required=False, action='store', help="A list of hotkeys to load into wallet, should align with passed names")
 
     checkout_parser = command_parsers.add_parser('checkout', help='''configure''')
-    checkout_parser.add_argument("--names", type=str, nargs='*', required=True, action='store', help="A list of nodes (hostnames) the selected command should operate on")
+    checkout_parser.add_argument("--names", type=str, nargs='*', required=False, action='store', help="A list of nodes (hostnames) the selected command should operate on")
     checkout_parser.add_argument('--branch', dest="branch", type=str, required=True)
 
     install_parser = command_parsers.add_parser('install', help='''install''')
-    install_parser.add_argument("--names", type=str, nargs='*', required=True, action='store', help="A list of nodes (hostnames) the selected command should operate on")
+    install_parser.add_argument("--names", type=str, nargs='*', required=False, action='store', help="A list of nodes (hostnames) the selected command should operate on")
 
     start_parser = command_parsers.add_parser('start', help='''start''')
-    start_parser.add_argument("--names", type=str, nargs='*', required=True, action='store', help="A list of nodes (hostnames) the selected command should operate on")
+    start_parser.add_argument("--names", type=str, nargs='*', required=False, action='store', help="A list of nodes (hostnames) the selected command should operate on")
     start_parser.add_argument('--miner', dest="miner", default='gpt2_genesis', type=str, required=False)
 
     stop_parser = command_parsers.add_parser('stop', help='''stop''')
-    stop_parser.add_argument("--names", type=str, nargs='*', required=True, action='store', help="A list of nodes (hostnames) the selected command should operate on")
+    stop_parser.add_argument("--names", type=str, nargs='*', required=False, action='store', help="A list of nodes (hostnames) the selected command should operate on")
 
     logs_parser = command_parsers.add_parser('logs', help='''logs''')
-    logs_parser.add_argument("--names", type=str, nargs='*', required=True, action='store', help="A list of nodes (hostnames) the selected command should operate on")
+    logs_parser.add_argument("--names", type=str, nargs='*', required=False, action='store', help="A list of nodes (hostnames) the selected command should operate on")
     logs_parser.add_argument('--miner', dest="miner", default='gpt2_genesis', type=str, required=False)
     
 
@@ -195,7 +195,7 @@ def install_bittensor_deps( connection ):
     return install_bittensor_deps_result
 
 def install_swapspace( connection ):
-    install_swap_command = "sudo fallocate -l 8G /swapfile && sudo chmod 600 /swapfile && sudo mkswap /swapfile && sudo swapon /swapfile && sudo cp /etc/fstab /etc/fstab.bak"
+    install_swap_command = "ulimit -n 50000 && sudo fallocate -l 8G /swapfile && sudo chmod 600 /swapfile && sudo mkswap /swapfile && sudo swapon /swapfile && sudo cp /etc/fstab /etc/fstab.bak"
     logger.debug("Installing swapspace: {}", install_swap_command)
     install_swap_result = connection.run(install_swap_command, hide=True, warn=True)
     logger.debug(install_swap_result)
@@ -242,7 +242,7 @@ def get_branch( connection ) -> str:
     return branch_name
 
 def start_miner( connection, miner_name ):
-    start_miner_command = "cd ~/.bittensor/bittensor ; nohup python3 miners/{}.py --miner.epoch_length 20 &> /dev/null &".format( miner_name )
+    start_miner_command = "cd ~/.bittensor/bittensor ; nohup python3 miners/{}.py --miner.resume --miner.restart_on_failure --miner.epoch_length 45 &> /dev/null &".format( miner_name )
     logger.debug("Starting miner: {}", start_miner_command)
     start_miner_result = connection.run(start_miner_command, warn=True, hide=True, pty=False)
     logger.debug( start_miner_result )
@@ -614,26 +614,46 @@ def laod_wallet_for_droplet( args ):
         logger.exception( e )
 
 def install( config ):
+    manager = digitalocean.Manager( token = TOKEN )
+    droplets = manager.get_all_droplets( tag_name = [ TAG ])
+    if config.names == None:
+        config.names = [droplet.name for droplet in droplets]
     iterables = [ (name, config) for name in config.names]
     with ThreadPoolExecutor(max_workers=10) as executor:
         tqdm(executor.map(install_bittensor_on_droplet_with_name, iterables), total=len(iterables))
 
 def checkout( config ):
+    manager = digitalocean.Manager( token = TOKEN )
+    droplets = manager.get_all_droplets( tag_name = [ TAG ])
+    if config.names == None:
+        config.names = [droplet.name for droplet in droplets]
     iterables = [ (name, config) for name in config.names]
     with ThreadPoolExecutor(max_workers=10) as executor:
         tqdm(executor.map(checkout_bittensor_on_droplet_with_name, iterables), total=len(iterables))
 
 def start( config ):
+    manager = digitalocean.Manager( token = TOKEN )
+    droplets = manager.get_all_droplets( tag_name = [ TAG ])
+    if config.names == None:
+        config.names = [droplet.name for droplet in droplets]
     iterables = [ (name, config) for name in config.names]
     with ThreadPoolExecutor(max_workers=10) as executor:
         tqdm(executor.map(start_droplet_with_name, iterables), total=len(iterables))
 
 def stop( config ):
+    manager = digitalocean.Manager( token = TOKEN )
+    droplets = manager.get_all_droplets( tag_name = [ TAG ])
+    if config.names == None:
+        config.names = [droplet.name for droplet in droplets]
     iterables = [ (name, config) for name in config.names]
     with ThreadPoolExecutor(max_workers=10) as executor:
         tqdm(executor.map(stop_droplet_with_name, iterables), total=len(iterables))
 
 def logs( config ):
+    manager = digitalocean.Manager( token = TOKEN )
+    droplets = manager.get_all_droplets( tag_name = [ TAG ])
+    if config.names == None:
+        config.names = [droplet.name for droplet in droplets]
     iterables = [ (name, config) for name in config.names]
     with ThreadPoolExecutor(max_workers=10) as executor:
         tqdm(executor.map(get_logs_for_droplet_with_name, iterables), total=len(iterables))

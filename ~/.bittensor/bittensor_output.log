@@ -271,3 +271,554 @@ Saving Metagraph...
 2021-05-10 at 18:34:30 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0x40d2b65b7ea1a8941dd4c1901cd7f97cb80cab787f3a5139f227734a2031db42
 2021-05-10 at 18:34:30 | INFO | Waiting for finalization...
 2021-05-10 at 18:34:50 | SUCCESS | Staked: τ1000.0 to uid: 961 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:43:24 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 18:43:31 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 18:43:37 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:43:37 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:43:37 | SUCCESS | Connected to network:kusanagi at endpoint:159.65.236.189:9944
+2021-05-10 at 18:43:37 | INFO | 
+Loading Metagraph...
+2021-05-10 at 18:43:37 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 18:43:37 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 18:43:41 | INFO | Metagraph: block:1607561, inflation_rate:0.5, staked:τ396267.5/τ803780.5, active:204/973
+2021-05-10 at 18:43:41 | INFO | 
+Saving Metagraph...
+2021-05-10 at 18:43:41 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 18:43:41 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0x84db5c9b3566c8468dde4ff98d7a3ab9a2902bd65fb7e353409c42d25dca680e
+2021-05-10 at 18:43:41 | INFO | Waiting for finalization...
+2021-05-10 at 18:44:03 | SUCCESS | Staked: τ1000.0 to uid: 934 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:44:25 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 18:44:28 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 18:44:34 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:44:34 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:44:35 | SUCCESS | Connected to network:kusanagi at endpoint:206.189.207.173:9944
+2021-05-10 at 18:44:35 | INFO | 
+Loading Metagraph...
+2021-05-10 at 18:44:35 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 18:44:35 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 18:44:38 | INFO | Metagraph: block:1607571, inflation_rate:0.5, staked:τ397268.15625/τ803785.5, active:205/973
+2021-05-10 at 18:44:38 | INFO | 
+Saving Metagraph...
+2021-05-10 at 18:44:38 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 18:44:38 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0x762a228038ceac2cc5e4eb85246b7f5be19b064a9c72fc6f636e3bff32c0711e
+2021-05-10 at 18:44:38 | INFO | Waiting for finalization...
+2021-05-10 at 18:44:57 | SUCCESS | Staked: τ1000.0 to uid: 930 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:47:05 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 18:47:09 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 18:47:15 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:47:15 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:47:15 | SUCCESS | Connected to network:kusanagi at endpoint:157.230.11.53:9944
+2021-05-10 at 18:47:15 | INFO | 
+Loading Metagraph...
+2021-05-10 at 18:47:16 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 18:47:16 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 18:47:19 | INFO | Metagraph: block:1607597, inflation_rate:0.5, staked:τ398270.90625/τ803798.5, active:204/973
+2021-05-10 at 18:47:19 | INFO | 
+Saving Metagraph...
+2021-05-10 at 18:47:19 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 18:47:19 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0xd84907db1e4a7178c8a51ff6d0a3a4d1ee368e8ae2a99ee69e1e18ba4819117f
+2021-05-10 at 18:47:19 | INFO | Waiting for finalization...
+2021-05-10 at 18:47:39 | SUCCESS | Staked: τ1000.0 to uid: 933 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:52:09 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 18:52:13 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 18:52:20 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:52:20 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:52:20 | SUCCESS | Connected to network:kusanagi at endpoint:157.230.11.53:9944
+2021-05-10 at 18:52:20 | INFO | 
+Loading Metagraph...
+2021-05-10 at 18:52:20 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 18:52:20 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 18:52:36 | INFO | Metagraph: block:1607650, inflation_rate:0.5, staked:τ399275.84375/τ803825.0, active:204/973
+2021-05-10 at 18:52:36 | INFO | 
+Saving Metagraph...
+2021-05-10 at 18:52:36 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 18:52:38 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0x906b689985503b8a026a2d702fcdfeff76ad2b61bb3278b2c7d1a40a6d093d39
+2021-05-10 at 18:52:38 | INFO | Waiting for finalization...
+2021-05-10 at 18:52:57 | SUCCESS | Staked: τ1000.0 to uid: 932 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:54:05 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 18:54:09 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 18:54:15 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:54:15 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:54:15 | SUCCESS | Connected to network:kusanagi at endpoint:157.230.11.53:9944
+2021-05-10 at 18:54:15 | INFO | 
+Loading Metagraph...
+2021-05-10 at 18:54:16 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 18:54:16 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 18:54:24 | INFO | Metagraph: block:1607668, inflation_rate:0.5, staked:τ400277.3125/τ803834.0, active:204/973
+2021-05-10 at 18:54:24 | INFO | 
+Saving Metagraph...
+2021-05-10 at 18:54:24 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 18:54:24 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0x72505ace96aeda6dfa2a931dc0c4c457009b388ddfc3483c66a2207169ff0605
+2021-05-10 at 18:54:24 | INFO | Waiting for finalization...
+2021-05-10 at 18:54:44 | SUCCESS | Staked: τ1000.0 to uid: 964 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:55:02 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 18:55:06 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 18:55:12 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:55:12 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:55:12 | SUCCESS | Connected to network:kusanagi at endpoint:157.230.11.36:9944
+2021-05-10 at 18:55:12 | INFO | 
+Loading Metagraph...
+2021-05-10 at 18:55:13 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 18:55:13 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 18:55:18 | INFO | Metagraph: block:1607677, inflation_rate:0.5, staked:τ401277.5625/τ803838.5, active:204/973
+2021-05-10 at 18:55:18 | INFO | 
+Saving Metagraph...
+2021-05-10 at 18:55:18 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 18:55:19 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0xe6b265128b958124139abe39419b3fb4fbfbbec5cf53de6acab445eceed83307
+2021-05-10 at 18:55:19 | INFO | Waiting for finalization...
+2021-05-10 at 18:55:38 | SUCCESS | Staked: τ1000.0 to uid: 969 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:55:49 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 18:55:57 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 18:56:03 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:56:03 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:56:03 | SUCCESS | Connected to network:kusanagi at endpoint:157.230.11.116:9944
+2021-05-10 at 18:56:03 | INFO | 
+Loading Metagraph...
+2021-05-10 at 18:56:04 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 18:56:04 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 18:56:06 | INFO | Metagraph: block:1607685, inflation_rate:0.5, staked:τ402278.3125/τ803842.5, active:203/973
+2021-05-10 at 18:56:06 | INFO | 
+Saving Metagraph...
+2021-05-10 at 18:56:07 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 18:56:07 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0xb828317ceaec7e5bdc2ec69ce0a2c50380e1f0a0cd34286171afc64ba529f800
+2021-05-10 at 18:56:07 | INFO | Waiting for finalization...
+2021-05-10 at 18:56:27 | SUCCESS | Staked: τ1000.0 to uid: 928 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:56:36 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 18:56:36 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:56:36 | INFO | 
+Connecting to network...
+2021-05-10 at 18:56:37 | SUCCESS | Connected to network:kusanagi at endpoint:157.230.11.116:9944
+2021-05-10 at 18:56:37 | INFO | 
+Loading Metagraph...
+2021-05-10 at 18:56:37 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 18:56:37 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 18:56:40 | INFO | Metagraph: block:1607691, inflation_rate:0.5, staked:τ403278.75/τ803845.5, active:203/973
+2021-05-10 at 18:56:40 | INFO | 
+Saving Metagraph...
+2021-05-10 at 18:56:40 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 18:56:41 | INFO | 
+Running queries ...
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:56:41 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-10 at 18:57:07 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 18:59:40 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 18:59:46 | SUCCESS | Loaded coldkey: 0xde23049a9f41e54f735d941524b829b0e33d10bd943579f1a3e6c375f654a90d
+2021-05-10 at 18:59:46 | SUCCESS | Loaded coldkey.pub: 0xde23049a9f41e54f735d941524b829b0e33d10bd943579f1a3e6c375f654a90d
+2021-05-10 at 18:59:47 | SUCCESS | Connected to network:kusanagi at endpoint:165.227.81.42:9944
+2021-05-10 at 18:59:48 | INFO | Requesting transfer of τ20000.0, from coldkey: 0xde23049a9f41e54f735d941524b829b0e33d10bd943579f1a3e6c375f654a90d to destination: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 18:59:48 | INFO | Waiting for finalization...
+2021-05-10 at 19:00:10 | SUCCESS | Transfer finalized with amount: τ20000.0 to destination: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f from coldkey.pub: 0xde23049a9f41e54f735d941524b829b0e33d10bd943579f1a3e6c375f654a90d
+2021-05-10 at 19:00:30 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:00:34 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:00:40 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:00:40 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:01:55 | ERROR | Error while connecting to network:kusanagi at endpoint: 142.93.203.149:9944
+2021-05-10 at 19:03:13 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:09:52 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:09:58 | CRITICAL | Invalid password
+2021-05-10 at 19:10:05 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:10:11 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:10:17 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:10:17 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:10:18 | SUCCESS | Connected to network:kusanagi at endpoint:157.230.11.36:9944
+2021-05-10 at 19:10:18 | INFO | 
+Loading Metagraph...
+2021-05-10 at 19:10:18 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:10:18 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 19:10:25 | INFO | Metagraph: block:1607828, inflation_rate:0.5, staked:τ403289.25/τ803914.0, active:203/974
+2021-05-10 at 19:10:25 | INFO | 
+Saving Metagraph...
+2021-05-10 at 19:10:25 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:10:26 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0xca36348311b0a969a3ef9bb3ec42e0857bcb2aab93f2c46c192a2c98d460d35e
+2021-05-10 at 19:10:26 | INFO | Waiting for finalization...
+2021-05-10 at 19:10:45 | SUCCESS | Staked: τ1000.0 to uid: 968 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:10:52 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:10:55 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:11:01 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:11:01 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:11:01 | SUCCESS | Connected to network:kusanagi at endpoint:157.230.11.116:9944
+2021-05-10 at 19:11:01 | INFO | 
+Loading Metagraph...
+2021-05-10 at 19:11:01 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:11:01 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 19:11:05 | INFO | Metagraph: block:1607835, inflation_rate:0.5, staked:τ404291.6875/τ803917.5, active:202/974
+2021-05-10 at 19:11:05 | INFO | 
+Saving Metagraph...
+2021-05-10 at 19:11:05 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:11:05 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0xd66abf722d133fa203712f4b7ee48a074d1e2a1d4cc73ae2ca67a25b2b63166d
+2021-05-10 at 19:11:05 | INFO | Waiting for finalization...
+2021-05-10 at 19:11:26 | SUCCESS | Staked: τ1000.0 to uid: 931 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:11:53 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:11:57 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:12:04 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:12:04 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:12:04 | SUCCESS | Connected to network:kusanagi at endpoint:157.230.11.31:9944
+2021-05-10 at 19:12:04 | INFO | 
+Loading Metagraph...
+2021-05-10 at 19:12:04 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:12:04 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 19:12:07 | INFO | Metagraph: block:1607845, inflation_rate:0.5, staked:τ405292.3125/τ803922.5, active:202/974
+2021-05-10 at 19:12:07 | INFO | 
+Saving Metagraph...
+2021-05-10 at 19:12:07 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:12:08 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0xd27ab607eab760ff91749bc0430c4473081420c1733c924c3642529f9f063a1c
+2021-05-10 at 19:12:08 | INFO | Waiting for finalization...
+2021-05-10 at 19:12:26 | SUCCESS | Staked: τ1000.0 to uid: 947 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:12:50 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:12:56 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:13:02 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:13:02 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:13:02 | SUCCESS | Connected to network:kusanagi at endpoint:157.230.11.31:9944
+2021-05-10 at 19:13:02 | INFO | 
+Loading Metagraph...
+2021-05-10 at 19:13:02 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:13:02 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 19:13:05 | INFO | Metagraph: block:1607855, inflation_rate:0.5, staked:τ406293.78125/τ803927.5, active:201/974
+2021-05-10 at 19:13:05 | INFO | 
+Saving Metagraph...
+2021-05-10 at 19:13:05 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:13:06 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0xeaad98559d8a0888e52e217a2eca2612fb29e612a8f62674ceb915c8960b1001
+2021-05-10 at 19:13:06 | INFO | Waiting for finalization...
+2021-05-10 at 19:13:07 | SUCCESS | Staked: τ1000.0 to uid: 965 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:13:35 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:13:39 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:13:45 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:13:45 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:14:02 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:14:05 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:14:11 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:14:11 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:14:11 | SUCCESS | Connected to network:kusanagi at endpoint:157.230.11.1:9944
+2021-05-10 at 19:14:11 | INFO | 
+Loading Metagraph...
+2021-05-10 at 19:14:11 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:14:11 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 19:14:14 | INFO | Metagraph: block:1607867, inflation_rate:0.5, staked:τ407295.28125/τ803933.5, active:202/974
+2021-05-10 at 19:14:14 | INFO | 
+Saving Metagraph...
+2021-05-10 at 19:14:14 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:14:15 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0x2212ebe9b64afc908dad7b0d362c7e5f5a6299a7a3206ceb344d7fefbfd40920
+2021-05-10 at 19:14:15 | INFO | Waiting for finalization...
+2021-05-10 at 19:14:16 | SUCCESS | Staked: τ1000.0 to uid: 970 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:14:32 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:14:39 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:14:45 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:14:45 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:14:46 | SUCCESS | Connected to network:kusanagi at endpoint:159.65.236.189:9944
+2021-05-10 at 19:14:46 | INFO | 
+Loading Metagraph...
+2021-05-10 at 19:14:46 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:14:46 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 19:14:49 | INFO | Metagraph: block:1607872, inflation_rate:0.5, staked:τ408295.59375/τ803936.0, active:202/974
+2021-05-10 at 19:14:49 | INFO | 
+Saving Metagraph...
+2021-05-10 at 19:14:49 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:14:50 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0x48361e3e1c548b0f64371ec85d17d72cae703077578ddf952c3aee86cf787c23
+2021-05-10 at 19:14:50 | INFO | Waiting for finalization...
+2021-05-10 at 19:14:51 | SUCCESS | Staked: τ1000.0 to uid: 943 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:29:51 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:29:55 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:30:01 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:30:01 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:30:01 | SUCCESS | Connected to network:kusanagi at endpoint:157.230.3.108:9944
+2021-05-10 at 19:30:01 | INFO | 
+Loading Metagraph...
+2021-05-10 at 19:30:01 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:30:01 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 19:30:04 | INFO | Metagraph: block:1608025, inflation_rate:0.5, staked:τ409310.6875/τ804012.5, active:202/974
+2021-05-10 at 19:30:04 | INFO | 
+Saving Metagraph...
+2021-05-10 at 19:30:04 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:30:05 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0xeaad98559d8a0888e52e217a2eca2612fb29e612a8f62674ceb915c8960b1001
+2021-05-10 at 19:30:05 | INFO | Waiting for finalization...
+2021-05-10 at 19:30:06 | SUCCESS | Staked: τ1000.0 to uid: 965 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:30:18 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:30:31 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:30:37 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:30:37 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:30:38 | SUCCESS | Connected to network:kusanagi at endpoint:206.189.207.173:9944
+2021-05-10 at 19:30:38 | INFO | 
+Loading Metagraph...
+2021-05-10 at 19:30:38 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:30:38 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 19:30:41 | INFO | Metagraph: block:1608031, inflation_rate:0.5, staked:τ410311.03125/τ804015.5, active:202/974
+2021-05-10 at 19:30:41 | INFO | 
+Saving Metagraph...
+2021-05-10 at 19:30:41 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:30:41 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0x2212ebe9b64afc908dad7b0d362c7e5f5a6299a7a3206ceb344d7fefbfd40920
+2021-05-10 at 19:30:41 | INFO | Waiting for finalization...
+2021-05-10 at 19:30:42 | SUCCESS | Staked: τ1000.0 to uid: 970 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:31:00 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:31:08 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:31:14 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:31:14 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:31:14 | SUCCESS | Connected to network:kusanagi at endpoint:157.230.11.31:9944
+2021-05-10 at 19:31:14 | INFO | 
+Loading Metagraph...
+2021-05-10 at 19:31:14 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:31:14 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 19:31:18 | INFO | Metagraph: block:1608037, inflation_rate:0.5, staked:τ411311.4375/τ804018.5, active:202/974
+2021-05-10 at 19:31:18 | INFO | 
+Saving Metagraph...
+2021-05-10 at 19:31:18 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:31:18 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0x48361e3e1c548b0f64371ec85d17d72cae703077578ddf952c3aee86cf787c23
+2021-05-10 at 19:31:18 | INFO | Waiting for finalization...
+2021-05-10 at 19:31:19 | SUCCESS | Staked: τ1000.0 to uid: 943 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:31:56 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:31:57 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:32:03 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:32:03 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:32:26 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:32:30 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:32:36 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:32:36 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:32:36 | SUCCESS | Connected to network:kusanagi at endpoint:157.230.11.31:9944
+2021-05-10 at 19:32:36 | INFO | 
+Loading Metagraph...
+2021-05-10 at 19:32:36 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:32:36 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 19:32:39 | INFO | Metagraph: block:1608051, inflation_rate:0.5, staked:τ412312.5/τ804025.5, active:201/974
+2021-05-10 at 19:32:39 | INFO | 
+Saving Metagraph...
+2021-05-10 at 19:32:40 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:32:40 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0xfec8569a9373f1d185582dc12b6701a86a0cfd6b4632d256fe0b824b23699723
+2021-05-10 at 19:32:40 | INFO | Waiting for finalization...
+2021-05-10 at 19:32:41 | SUCCESS | Staked: τ1000.0 to uid: 967 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:32:51 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:32:52 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:32:58 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:32:58 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:32:58 | SUCCESS | Connected to network:kusanagi at endpoint:159.65.236.189:9944
+2021-05-10 at 19:32:58 | INFO | 
+Loading Metagraph...
+2021-05-10 at 19:32:58 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:32:58 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 19:33:02 | INFO | Metagraph: block:1608054, inflation_rate:0.5, staked:τ413312.53125/τ804027.0, active:201/974
+2021-05-10 at 19:33:02 | INFO | 
+Saving Metagraph...
+2021-05-10 at 19:33:02 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:33:02 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0xd2dbf71bd6cfb3b757aad7e9921d4a1efae7cd8970f455b357682fc8caa3c678
+2021-05-10 at 19:33:02 | INFO | Waiting for finalization...
+2021-05-10 at 19:33:03 | SUCCESS | Staked: τ1000.0 to uid: 939 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:33:16 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:33:17 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:33:23 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:33:23 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:33:24 | SUCCESS | Connected to network:kusanagi at endpoint:157.230.11.1:9944
+2021-05-10 at 19:33:24 | INFO | 
+Loading Metagraph...
+2021-05-10 at 19:33:24 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:33:24 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 19:33:27 | INFO | Metagraph: block:1608059, inflation_rate:0.5, staked:τ414313.125/τ804029.5, active:203/974
+2021-05-10 at 19:33:27 | INFO | 
+Saving Metagraph...
+2021-05-10 at 19:33:27 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:33:27 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0x521c78b79bf450f822b0e1e217ac10ec46ad71600adeee060960a6ef4c50630d
+2021-05-10 at 19:33:27 | INFO | Waiting for finalization...
+2021-05-10 at 19:33:28 | SUCCESS | Staked: τ1000.0 to uid: 960 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:33:39 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:33:41 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:33:47 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:33:47 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:33:47 | SUCCESS | Connected to network:kusanagi at endpoint:165.227.81.42:9944
+2021-05-10 at 19:33:47 | INFO | 
+Loading Metagraph...
+2021-05-10 at 19:33:47 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:33:47 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 19:33:51 | INFO | Metagraph: block:1608063, inflation_rate:0.5, staked:τ415313.65625/τ804031.5, active:203/974
+2021-05-10 at 19:33:51 | INFO | 
+Saving Metagraph...
+2021-05-10 at 19:33:51 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:33:52 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0xbc851998ac08d2aa02cf66f5302472976241dc196d2a3e04df102362bac24418
+2021-05-10 at 19:33:52 | INFO | Waiting for finalization...
+2021-05-10 at 19:33:52 | SUCCESS | Staked: τ1000.0 to uid: 937 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:34:04 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:34:06 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:34:12 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:34:12 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:34:12 | SUCCESS | Connected to network:kusanagi at endpoint:206.189.207.173:9944
+2021-05-10 at 19:34:12 | INFO | 
+Loading Metagraph...
+2021-05-10 at 19:34:12 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:34:12 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 19:34:15 | INFO | Metagraph: block:1608067, inflation_rate:0.5, staked:τ416314.0625/τ804033.5, active:203/974
+2021-05-10 at 19:34:15 | INFO | 
+Saving Metagraph...
+2021-05-10 at 19:34:15 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:34:16 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0x2679c8b83303b1544899dc5dea9b274930626650d68c80c3207dbff2194d5e18
+2021-05-10 at 19:34:16 | INFO | Waiting for finalization...
+2021-05-10 at 19:34:16 | SUCCESS | Staked: τ1000.0 to uid: 958 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:34:27 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:34:29 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:34:35 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:34:35 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:34:35 | SUCCESS | Connected to network:kusanagi at endpoint:157.230.11.36:9944
+2021-05-10 at 19:34:35 | INFO | 
+Loading Metagraph...
+2021-05-10 at 19:34:35 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:34:35 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 19:34:39 | INFO | Metagraph: block:1608071, inflation_rate:0.5, staked:τ417314.1875/τ804035.5, active:203/974
+2021-05-10 at 19:34:39 | INFO | 
+Saving Metagraph...
+2021-05-10 at 19:34:39 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:34:40 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0xb2b0d594d6ec3140492db7c5d8afa7d78f6193c74cd5c46861f5a96a6b5b2c49
+2021-05-10 at 19:34:40 | INFO | Waiting for finalization...
+2021-05-10 at 19:34:41 | SUCCESS | Staked: τ1000.0 to uid: 945 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:34:54 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:34:55 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:35:01 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:35:01 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:35:01 | SUCCESS | Connected to network:kusanagi at endpoint:157.230.3.108:9944
+2021-05-10 at 19:35:01 | INFO | 
+Loading Metagraph...
+2021-05-10 at 19:35:01 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:35:01 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 19:35:04 | INFO | Metagraph: block:1608075, inflation_rate:0.5, staked:τ418314.65625/τ804037.5, active:203/974
+2021-05-10 at 19:35:04 | INFO | 
+Saving Metagraph...
+2021-05-10 at 19:35:04 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:35:05 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0xda803c14e5ab3b92dcbcccb2ccd291a0117838d6c1bac18c22d9a50cbbb7ff71
+2021-05-10 at 19:35:05 | INFO | Waiting for finalization...
+2021-05-10 at 19:35:05 | SUCCESS | Staked: τ1000.0 to uid: 971 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:35:17 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:35:18 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:35:24 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:35:24 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:35:24 | SUCCESS | Connected to network:kusanagi at endpoint:159.65.236.189:9944
+2021-05-10 at 19:35:24 | INFO | 
+Loading Metagraph...
+2021-05-10 at 19:35:24 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:35:24 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 19:35:28 | INFO | Metagraph: block:1608079, inflation_rate:0.5, staked:τ419314.96875/τ804039.5, active:203/974
+2021-05-10 at 19:35:28 | INFO | 
+Saving Metagraph...
+2021-05-10 at 19:35:28 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:35:28 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0x1ce54448b1cc1684fe7e00c3a85a6d42049ca5c38a17407ec8a4ce6bcb339e25
+2021-05-10 at 19:35:28 | INFO | Waiting for finalization...
+2021-05-10 at 19:35:29 | SUCCESS | Staked: τ1000.0 to uid: 962 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:35:36 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:35:38 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:35:44 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:35:44 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:35:44 | SUCCESS | Connected to network:kusanagi at endpoint:157.230.11.1:9944
+2021-05-10 at 19:35:44 | INFO | 
+Loading Metagraph...
+2021-05-10 at 19:35:44 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:35:44 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 19:35:47 | INFO | Metagraph: block:1608082, inflation_rate:0.5, staked:τ420315.0625/τ804041.0, active:203/974
+2021-05-10 at 19:35:47 | INFO | 
+Saving Metagraph...
+2021-05-10 at 19:35:47 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:35:48 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0x6e64c04864004f8c1b1383c36174c6b5e67c233d0b76f7252525b0728a88225a
+2021-05-10 at 19:35:48 | INFO | Waiting for finalization...
+2021-05-10 at 19:35:49 | SUCCESS | Staked: τ1000.0 to uid: 940 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:36:02 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:36:03 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:36:09 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:36:09 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:36:10 | SUCCESS | Connected to network:kusanagi at endpoint:159.65.236.189:9944
+2021-05-10 at 19:36:10 | INFO | 
+Loading Metagraph...
+2021-05-10 at 19:36:10 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:36:10 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 19:36:13 | INFO | Metagraph: block:1608086, inflation_rate:0.5, staked:τ421315.5625/τ804043.0, active:203/974
+2021-05-10 at 19:36:13 | INFO | 
+Saving Metagraph...
+2021-05-10 at 19:36:13 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:36:13 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0x348adc1377bef9118474501676f384a11f6131d17d0851832e1e084e0595a214
+2021-05-10 at 19:36:13 | INFO | Waiting for finalization...
+2021-05-10 at 19:36:14 | SUCCESS | Staked: τ1000.0 to uid: 972 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:36:25 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:36:26 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:36:32 | CRITICAL | Invalid password
+2021-05-10 at 19:36:39 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:36:40 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:36:46 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:36:46 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:36:46 | SUCCESS | Connected to network:kusanagi at endpoint:157.230.3.108:9944
+2021-05-10 at 19:36:46 | INFO | 
+Loading Metagraph...
+2021-05-10 at 19:36:46 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:36:46 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 19:36:49 | INFO | Metagraph: block:1608092, inflation_rate:0.5, staked:τ422316.03125/τ804046.0, active:202/974
+2021-05-10 at 19:36:49 | INFO | 
+Saving Metagraph...
+2021-05-10 at 19:36:49 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:36:50 | INFO | Adding stake of τ1000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0xde9f17fa147ea35daffbb7bdb745250c54388b7f83152f298146b34d31a36505
+2021-05-10 at 19:36:50 | INFO | Waiting for finalization...
+2021-05-10 at 19:36:50 | SUCCESS | Staked: τ1000.0 to uid: 941 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:37:00 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-10 at 19:37:03 | INFO | decrypting key... (this may take a few moments)
+2021-05-10 at 19:37:09 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:37:09 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-10 at 19:37:09 | SUCCESS | Connected to network:kusanagi at endpoint:165.227.81.42:9944
+2021-05-10 at 19:37:09 | INFO | 
+Loading Metagraph...
+2021-05-10 at 19:37:09 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:37:09 | INFO | 
+Syncing Metagraph...
+2021-05-10 at 19:37:13 | INFO | Metagraph: block:1608096, inflation_rate:0.5, staked:τ423316.09375/τ804048.0, active:202/974
+2021-05-10 at 19:37:13 | INFO | 
+Saving Metagraph...
+2021-05-10 at 19:37:13 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-10 at 19:37:14 | CRITICAL | Not enough balance (τTao 5.000000000) to stake τTao 1000.000000000
