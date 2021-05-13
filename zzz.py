@@ -31,6 +31,7 @@ nest_asyncio.apply()
 TAG = os.getenv('ZZZTAG')
 TOKEN = os.getenv('ZZZTOKEN')
 KEY = os.getenv('ZZZKEY')
+MAX_THREADS = 20
 
 def parse_config():
     parser = argparse.ArgumentParser(description="zz1", usage="zz1 <command> <command args>", add_help=True)
@@ -249,14 +250,14 @@ def get_branch( connection ) -> str:
     return branch_name
 
 def start_miner( connection, miner_name ):
-    start_miner_command = "rm stopnow ; cd ~/.bittensor/bittensor ; ./run-forever.sh python3 miners/{}.py --miner.resume --miner.restart_on_failure --miner.epoch_length 45 &".format( miner_name )
+    start_miner_command = "cd ~/.bittensor/bittensor ; nohup python3 miners/{}.py --miner.resume --miner.restart_on_failure --miner.epoch_length 45 &> /dev/null &".format( miner_name )
     logger.debug("Starting miner: {}", start_miner_command)
     start_miner_result = connection.run(start_miner_command, warn=True, hide=True, pty=False)
     logger.debug( start_miner_result )
     return start_miner_result
 
 def stop_miner( connection ):
-    stop_miner_command = "touch stopnow ; pgrep -f miners | xargs kill"
+    stop_miner_command = "pgrep -f miners | xargs kill"
     logger.debug("Stopping miner: {}", stop_miner_command)
     stop_miner_result = connection.run(stop_miner_command, warn=True, hide=True)
     logger.debug( stop_miner_result )
@@ -585,19 +586,19 @@ def laod_wallet_for_droplet( args ):
         
         # Make wallet dirs.
         if make_wallet_dirs( connection ).failed:
-            logger.error('<blue>{}</blue>: Error creating wallet dirs with command: {}', name, mkdirs_command)
+            logger.error('<blue>{}</blue>: Error creating wallet dirs', name)
             return
         logger.success('<blue>{}</blue>: Created wallet directories', name)
 
         # Copy hotkey.
         if copy_hotkey( connection, wallet ).failed:
-            logger.error('<blue>{}</blue>: Error copy hotkey with command: {}', name, copy_hotkey_command)
+            logger.error('<blue>{}</blue>: Error coping hotkey.', name)
             return
         logger.success('<blue>{}</blue>: Copied hotkey to dir: {}', name, '/root/.bittensor/wallets/default/hotkeys/default')
 
         # Copy coldkeypub
         if copy_coldkeypub(connection, wallet).failed:
-            logger.error('<blue>{}</blue>: Error copy coldkey with command: {}', name, copy_coldkeypub_command)
+            logger.error('<blue>{}</blue>: Error copy coldkey', name)
             return
         logger.success('<blue>{}</blue>: Copied coldkey to dir: {}', name, '/root/.bittensor/wallets/default/coldkeypub.txt')
 
@@ -625,7 +626,7 @@ def install( config ):
     if config.names == None:
         config.names = [droplet.name for droplet in droplets]
     iterables = [ (name, config) for name in config.names]
-    with ThreadPoolExecutor(max_workers=10) as executor:
+    with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
         tqdm(executor.map(install_bittensor_on_droplet_with_name, iterables), total=len(iterables))
 
 def checkout( config ):
@@ -634,7 +635,7 @@ def checkout( config ):
     if config.names == None:
         config.names = [droplet.name for droplet in droplets]
     iterables = [ (name, config) for name in config.names]
-    with ThreadPoolExecutor(max_workers=10) as executor:
+    with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
         tqdm(executor.map(checkout_bittensor_on_droplet_with_name, iterables), total=len(iterables))
 
 def start( config ):
@@ -643,7 +644,7 @@ def start( config ):
     if config.names == None:
         config.names = [droplet.name for droplet in droplets]
     iterables = [ (name, config) for name in config.names]
-    with ThreadPoolExecutor(max_workers=10) as executor:
+    with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
         tqdm(executor.map(start_droplet_with_name, iterables), total=len(iterables))
 
 def stop( config ):
@@ -652,7 +653,7 @@ def stop( config ):
     if config.names == None:
         config.names = [droplet.name for droplet in droplets]
     iterables = [ (name, config) for name in config.names]
-    with ThreadPoolExecutor(max_workers=10) as executor:
+    with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
         tqdm(executor.map(stop_droplet_with_name, iterables), total=len(iterables))
 
 def logs( config ):
@@ -661,14 +662,13 @@ def logs( config ):
     if config.names == None:
         config.names = [droplet.name for droplet in droplets]
     iterables = [ (name, config) for name in config.names]
-    with ThreadPoolExecutor(max_workers=10) as executor:
+    with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
         tqdm(executor.map(get_logs_for_droplet_with_name, iterables), total=len(iterables))
 
 def wallet (config):
     iterables = [ (name, config) for name in config.names]
-    with ThreadPoolExecutor(max_workers=10) as executor:
+    with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
         tqdm(executor.map(laod_wallet_for_droplet, iterables), total=len(iterables))
-
 
 def status( config ):
 
@@ -812,7 +812,7 @@ def status( config ):
         meta.save()
     
         TABLE_DATA = []
-        with ThreadPoolExecutor(max_workers=20) as executor:
+        with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
             if config.live:
                 TABLE_DATA = list(executor.map(get_row, droplets))
             else:
