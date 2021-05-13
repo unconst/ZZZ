@@ -6,6 +6,7 @@ import json
 import torch
 import time
 import digitalocean
+import paramiko
 from tqdm import tqdm
 from rich import box
 from rich.align import Align
@@ -91,9 +92,15 @@ def parse_config():
     return config
 
 def connection_for_droplet( droplet ) -> Connection:
-    con = Connection( droplet.ip_address, user='root', connect_kwargs={
-            "key_filename" : KEY
-        })
+    try:
+        key = paramiko.RSAKey.from_private_key_file(os.path.expanduser(KEY))
+        con = Connection( droplet.ip_address, user='root', connect_kwargs={
+                "pkey" : key
+            })
+    except:
+        con = Connection( droplet.ip_address, user='root', connect_kwargs={
+                "key_filename" : os.path.expanduser(KEY)
+            })
     return con
 
 def can_connect( connection ) -> bool:
@@ -242,14 +249,14 @@ def get_branch( connection ) -> str:
     return branch_name
 
 def start_miner( connection, miner_name ):
-    start_miner_command = "cd ~/.bittensor/bittensor ; nohup python3 miners/{}.py --miner.resume --miner.restart_on_failure --miner.epoch_length 45 &> /dev/null &".format( miner_name )
+    start_miner_command = "rm stopnow ; cd ~/.bittensor/bittensor ; ./run-forever.sh python3 miners/{}.py --miner.resume --miner.restart_on_failure --miner.epoch_length 45 &".format( miner_name )
     logger.debug("Starting miner: {}", start_miner_command)
     start_miner_result = connection.run(start_miner_command, warn=True, hide=True, pty=False)
     logger.debug( start_miner_result )
     return start_miner_result
 
 def stop_miner( connection ):
-    stop_miner_command = "pgrep -f miners | xargs kill"
+    stop_miner_command = "touch stopnow ; pgrep -f miners | xargs kill"
     logger.debug("Stopping miner: {}", stop_miner_command)
     stop_miner_result = connection.run(stop_miner_command, warn=True, hide=True)
     logger.debug( stop_miner_result )
@@ -541,7 +548,6 @@ def checkout_bittensor_on_droplet_with_name( args ):
     except Exception as e:
         logger.exception( e )
 
-
 def laod_wallet_for_droplet( args ):
     try:
         name = args[0]
@@ -806,7 +812,7 @@ def status( config ):
         meta.save()
     
         TABLE_DATA = []
-        with ThreadPoolExecutor(max_workers=10) as executor:
+        with ThreadPoolExecutor(max_workers=20) as executor:
             if config.live:
                 TABLE_DATA = list(executor.map(get_row, droplets))
             else:
