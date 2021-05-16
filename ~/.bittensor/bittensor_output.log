@@ -822,3 +822,354 @@ Syncing Metagraph...
 Saving Metagraph...
 2021-05-10 at 19:37:13 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
 2021-05-10 at 19:37:14 | CRITICAL | Not enough balance (τTao 5.000000000) to stake τTao 1000.000000000
+2021-05-13 at 09:26:50 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-13 at 09:26:59 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-13 at 09:27:09 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-13 at 09:27:17 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-13 at 09:27:23 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-13 at 09:27:29 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-13 at 09:27:36 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-13 at 09:27:45 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-13 at 09:27:52 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-13 at 09:28:00 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 14:39:41 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 14:39:41 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 14:39:41 | INFO | 
+Connecting to network...
+2021-05-14 at 14:39:42 | SUCCESS | Connected to network:kusanagi at endpoint:mendeleev.kusanagi.bittensor.com:9944
+2021-05-14 at 14:39:42 | INFO | 
+Loading Metagraph...
+2021-05-14 at 14:39:42 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-14 at 14:39:42 | INFO | 
+Syncing Metagraph...
+2021-05-14 at 14:39:49 | INFO | Metagraph: block:1662676, inflation_rate:0.5, staked:τ449601.9375/τ831338.0, active:374/998
+2021-05-14 at 14:39:49 | INFO | 
+Saving Metagraph...
+2021-05-14 at 14:39:49 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-14 at 14:39:50 | INFO | 
+Running queries ...
+2021-05-14 at 14:39:50 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:50 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:50 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:50 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:50 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:50 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:50 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:50 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:50 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:50 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:50 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:50 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:50 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:50 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:50 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:50 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:39:51 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 14:43:19 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 14:43:22 | INFO | decrypting key... (this may take a few moments)
+2021-05-14 at 14:43:29 | CRITICAL | Invalid password
+2021-05-14 at 14:43:39 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 14:43:40 | INFO | decrypting key... (this may take a few moments)
+2021-05-14 at 14:43:47 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 14:43:47 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 14:43:56 | SUCCESS | Connected to network:kusanagi at endpoint:feynman.kusanagi.bittensor.com:9944
+2021-05-14 at 14:43:56 | INFO | 
+Loading Metagraph...
+2021-05-14 at 14:43:56 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-14 at 14:43:56 | INFO | 
+Syncing Metagraph...
+2021-05-14 at 14:44:03 | INFO | Metagraph: block:1662717, inflation_rate:0.5, staked:τ449620.625/τ831358.5, active:375/998
+2021-05-14 at 14:44:03 | INFO | 
+Saving Metagraph...
+2021-05-14 at 14:44:03 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-14 at 14:44:04 | INFO | Adding stake of τ5000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0xcac91850502dc9afc129875579a047aaec2185f1ba3642421d6bdcf8158f6e52
+2021-05-14 at 14:44:04 | INFO | Waiting for finalization...
+2021-05-14 at 14:44:34 | SUCCESS | Staked: τ5000.0 to uid: 963 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 14:45:05 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 14:45:10 | INFO | decrypting key... (this may take a few moments)
+2021-05-14 at 14:45:18 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 14:45:18 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 14:45:21 | SUCCESS | Connected to network:kusanagi at endpoint:feynman.kusanagi.bittensor.com:9944
+2021-05-14 at 14:45:21 | INFO | 
+Loading Metagraph...
+2021-05-14 at 14:45:21 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-14 at 14:45:21 | INFO | 
+Syncing Metagraph...
+2021-05-14 at 14:45:27 | INFO | Metagraph: block:1662730, inflation_rate:0.5, staked:τ454626.34375/τ831365.0, active:374/998
+2021-05-14 at 14:45:27 | INFO | 
+Saving Metagraph...
+2021-05-14 at 14:45:27 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-14 at 14:45:28 | INFO | Adding stake of τ5000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0xe2c82103e9e1e89f1d22723f085e83be09e7b284f675c9851722b4bbc0a38800
+2021-05-14 at 14:45:28 | INFO | Waiting for finalization...
+2021-05-14 at 14:45:51 | SUCCESS | Staked: τ5000.0 to uid: 942 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 14:48:01 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 14:48:06 | INFO | decrypting key... (this may take a few moments)
+2021-05-14 at 14:48:13 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 14:48:13 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 14:48:18 | SUCCESS | Connected to network:kusanagi at endpoint:copernicus.kusanagi.bittensor.com:9944
+2021-05-14 at 14:48:18 | INFO | 
+Loading Metagraph...
+2021-05-14 at 14:48:18 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-14 at 14:48:18 | INFO | 
+Syncing Metagraph...
+2021-05-14 at 14:48:26 | INFO | Metagraph: block:1662760, inflation_rate:0.5, staked:τ459633.0625/τ831380.0, active:379/1002
+2021-05-14 at 14:48:26 | INFO | 
+Saving Metagraph...
+2021-05-14 at 14:48:26 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-14 at 14:48:27 | INFO | Adding stake of τ5000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0x080d02d079290089e3c4b33e5fbb7ca569450d530c0c5a3b80287c6210376763
+2021-05-14 at 14:48:27 | INFO | Waiting for finalization...
+2021-05-14 at 14:48:56 | SUCCESS | Staked: τ5000.0 to uid: 935 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 15:15:51 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 15:16:04 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 15:16:18 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 15:16:38 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 15:16:58 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 16:12:16 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 16:12:19 | INFO | decrypting key... (this may take a few moments)
+2021-05-14 at 16:12:26 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 16:12:26 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 16:12:26 | SUCCESS | Connected to network:kusanagi at endpoint:copernicus.kusanagi.bittensor.com:9944
+2021-05-14 at 16:12:26 | INFO | 
+Loading Metagraph...
+2021-05-14 at 16:12:26 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-14 at 16:12:26 | INFO | 
+Syncing Metagraph...
+2021-05-14 at 16:12:39 | INFO | Metagraph: block:1663601, inflation_rate:0.5, staked:τ465008.6875/τ831800.5, active:423/1044
+2021-05-14 at 16:12:39 | INFO | 
+Saving Metagraph...
+2021-05-14 at 16:12:39 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-14 at 16:12:39 | INFO | Adding stake of τ5000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0x14829fb4b8e1b77bb5e669ee4c556de70146406dd2a8ca3bec6b591f1a8bb145
+2021-05-14 at 16:12:39 | INFO | Waiting for finalization...
+2021-05-14 at 16:12:57 | SUCCESS | Staked: τ5000.0 to uid: 1012 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 16:13:09 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 16:13:17 | INFO | decrypting key... (this may take a few moments)
+2021-05-14 at 16:13:24 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 16:13:24 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 16:13:25 | SUCCESS | Connected to network:kusanagi at endpoint:feynman.kusanagi.bittensor.com:9944
+2021-05-14 at 16:13:25 | INFO | 
+Loading Metagraph...
+2021-05-14 at 16:13:25 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-14 at 16:13:25 | INFO | 
+Syncing Metagraph...
+2021-05-14 at 16:13:29 | INFO | Metagraph: block:1663611, inflation_rate:0.5, staked:τ470012.28125/τ831805.5, active:424/1044
+2021-05-14 at 16:13:29 | INFO | 
+Saving Metagraph...
+2021-05-14 at 16:13:29 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-14 at 16:13:30 | INFO | Adding stake of τ5000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0xc0c1e33ea2afc05df4bb155b788e358bbeda315369de13785348f2bed5684945
+2021-05-14 at 16:13:30 | INFO | Waiting for finalization...
+2021-05-14 at 16:13:51 | SUCCESS | Staked: τ5000.0 to uid: 1011 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 16:32:01 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 16:32:06 | INFO | decrypting key... (this may take a few moments)
+2021-05-14 at 16:32:12 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 16:32:12 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 16:32:12 | SUCCESS | Connected to network:kusanagi at endpoint:berkeley.kusanagi.bittensor.com:9944
+2021-05-14 at 16:32:12 | INFO | 
+Loading Metagraph...
+2021-05-14 at 16:32:13 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-14 at 16:32:13 | INFO | 
+Syncing Metagraph...
+2021-05-14 at 16:32:20 | INFO | Metagraph: block:1663799, inflation_rate:0.5, staked:τ475073.75/τ831899.5, active:421/1044
+2021-05-14 at 16:32:20 | INFO | 
+Saving Metagraph...
+2021-05-14 at 16:32:20 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-14 at 16:32:21 | INFO | Adding stake of τ5000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0x74ba9867456edb4baf61236f6eb18d75b4ab8d84e9116aa8e4c6e73d61ac5276
+2021-05-14 at 16:32:21 | INFO | Waiting for finalization...
+2021-05-14 at 16:32:38 | SUCCESS | Staked: τ5000.0 to uid: 1009 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 17:01:46 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 17:10:06 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 17:10:11 | INFO | decrypting key... (this may take a few moments)
+2021-05-14 at 17:10:18 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 17:10:18 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 17:10:20 | SUCCESS | Connected to network:kusanagi at endpoint:nobel.kusanagi.bittensor.com:9944
+2021-05-14 at 17:10:20 | INFO | 
+Loading Metagraph...
+2021-05-14 at 17:10:20 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-14 at 17:10:20 | INFO | 
+Syncing Metagraph...
+2021-05-14 at 17:10:25 | INFO | Metagraph: block:1664180, inflation_rate:0.5, staked:τ480281.25/τ832090.0, active:435/1056
+2021-05-14 at 17:10:25 | INFO | 
+Saving Metagraph...
+2021-05-14 at 17:10:25 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-14 at 17:10:25 | INFO | Adding stake of τ20000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0x64ad22e99c13d8fed366472081e8904acca05f9f0f5942f8abb2770dd5d01e41
+2021-05-14 at 17:10:25 | INFO | Waiting for finalization...
+2021-05-14 at 17:10:45 | SUCCESS | Staked: τ20000.0 to uid: 1055 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 17:26:03 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 17:26:08 | INFO | decrypting key... (this may take a few moments)
+2021-05-14 at 17:26:14 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 17:26:14 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 17:26:14 | SUCCESS | Connected to network:kusanagi at endpoint:buys.kusanagi.bittensor.com:9944
+2021-05-14 at 17:26:14 | INFO | 
+Loading Metagraph...
+2021-05-14 at 17:26:14 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-14 at 17:26:14 | INFO | 
+Syncing Metagraph...
+2021-05-14 at 17:26:18 | INFO | Metagraph: block:1664338, inflation_rate:0.5, staked:τ500333.75/τ832169.0, active:436/1056
+2021-05-14 at 17:26:18 | INFO | 
+Saving Metagraph...
+2021-05-14 at 17:26:18 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-14 at 17:26:18 | INFO | Adding stake of τ20000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0x64ad22e99c13d8fed366472081e8904acca05f9f0f5942f8abb2770dd5d01e41
+2021-05-14 at 17:26:18 | INFO | Waiting for finalization...
+2021-05-14 at 17:26:39 | SUCCESS | Staked: τ20000.0 to uid: 1055 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 17:30:39 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 17:30:45 | INFO | decrypting key... (this may take a few moments)
+2021-05-14 at 17:30:51 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 17:30:51 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 17:30:52 | SUCCESS | Connected to network:kusanagi at endpoint:copernicus.kusanagi.bittensor.com:9944
+2021-05-14 at 17:30:52 | INFO | 
+Loading Metagraph...
+2021-05-14 at 17:30:52 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-14 at 17:30:52 | INFO | 
+Syncing Metagraph...
+2021-05-14 at 17:30:59 | INFO | Metagraph: block:1664385, inflation_rate:0.5, staked:τ520376.4375/τ832192.5, active:436/1056
+2021-05-14 at 17:30:59 | INFO | 
+Saving Metagraph...
+2021-05-14 at 17:30:59 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-14 at 17:30:59 | INFO | Adding stake of τ20000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0x86d5307b4eb6f687d39fbfab57139e8be12ec6dd9822c7df1467c9026aa0725a
+2021-05-14 at 17:30:59 | INFO | Waiting for finalization...
+2021-05-14 at 17:31:22 | SUCCESS | Staked: τ20000.0 to uid: 982 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 17:38:41 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 17:38:52 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 17:38:59 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 17:39:09 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 17:39:37 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 17:56:14 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 19:30:17 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 19:30:17 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 19:30:17 | INFO | 
+Connecting to network...
+2021-05-14 at 19:30:17 | SUCCESS | Connected to network:kusanagi at endpoint:mendeleev.kusanagi.bittensor.com:9944
+2021-05-14 at 19:30:17 | INFO | 
+Loading Metagraph...
+2021-05-14 at 19:30:17 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-14 at 19:30:17 | INFO | 
+Syncing Metagraph...
+2021-05-14 at 19:30:21 | INFO | Metagraph: block:1665578, inflation_rate:0.5, staked:τ540941.8125/τ832789.0, active:454/1067
+2021-05-14 at 19:30:21 | INFO | 
+Saving Metagraph...
+2021-05-14 at 19:30:21 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-14 at 19:30:21 | INFO | 
+Running queries ...
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:21 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:22 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:22 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:22 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:22 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:22 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:30:22 | CRITICAL | hotkeyfile  /Users/const/.bittensor/wallets/zz1/hotkeys/default does not exist
+2021-05-14 at 19:31:01 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 19:31:14 | INFO | decrypting key... (this may take a few moments)
+2021-05-14 at 19:31:21 | SUCCESS | Loaded coldkey: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 19:31:21 | SUCCESS | Loaded coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 19:31:21 | SUCCESS | Connected to network:kusanagi at endpoint:bunsen.kusanagi.bittensor.com:9944
+2021-05-14 at 19:31:21 | INFO | 
+Loading Metagraph...
+2021-05-14 at 19:31:21 | SUCCESS | Loaded metagraph from: ~/.bittensor/kusanagi.pt
+2021-05-14 at 19:31:21 | INFO | 
+Syncing Metagraph...
+2021-05-14 at 19:31:24 | INFO | Metagraph: block:1665589, inflation_rate:0.5, staked:τ540944.875/τ832794.5, active:454/1067
+2021-05-14 at 19:31:24 | INFO | 
+Saving Metagraph...
+2021-05-14 at 19:31:24 | SUCCESS | Saved metagraph to: ~/.bittensor/kusanagi.pt
+2021-05-14 at 19:31:25 | INFO | Adding stake of τ28000.0 from coldkey 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f to hotkey 0xa825906271df04a197e89907ea61f052f1626f9326cafabf1aa97624b5f02b0a
+2021-05-14 at 19:31:25 | INFO | Waiting for finalization...
+2021-05-14 at 19:31:46 | SUCCESS | Staked: τ28000.0 to uid: 1066 from coldkey.pub: 0x4c87f78756208e334014911af9374e583e68029a383bdad1a02234ab46f33a5f
+2021-05-14 at 19:40:58 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 19:41:11 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 19:41:27 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 19:41:33 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 20:08:09 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 20:08:17 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 20:08:24 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 20:08:32 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 20:08:40 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 20:08:47 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 20:09:08 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 20:09:21 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 20:09:38 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-14 at 20:09:51 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-15 at 08:59:04 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-15 at 08:59:11 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-15 at 08:59:18 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-15 at 08:59:26 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-15 at 08:59:34 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-15 at 08:59:42 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-15 at 08:59:55 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-15 at 09:00:10 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log
+2021-05-15 at 12:07:13 | INFO | LOGGING is ON with sink: ~/.bittensor/bittensor_output.log

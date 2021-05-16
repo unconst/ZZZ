@@ -33,65 +33,6 @@ TOKEN = os.getenv('ZZZTOKEN')
 KEY = os.getenv('ZZZKEY')
 MAX_THREADS = 20
 
-def parse_config():
-    parser = argparse.ArgumentParser(description="zz1", usage="zz1 <command> <command args>", add_help=True)
-    parser._positionals.title = "commands"
-    parser.add_argument (
-        '--debug', 
-        dest='debug', 
-        action='store_true', 
-        help='''Set debug'''
-    )
-    parser.set_defaults ( 
-        debug=False 
-    )
-    command_parsers = parser.add_subparsers( dest='command' )
-    status_parser = command_parsers.add_parser('status', help='''Show mining overview''')
-    status_parser.add_argument("--names", type=str, required=False, nargs='*', action='store', help="A list of nodes (hostnames) the selected command should operate on")
-    status_parser.add_argument (
-        '--live', 
-        dest='live', 
-        action='store_true', 
-        help='''Set live table'''
-    )
-    status_parser.set_defaults ( 
-        liva=False 
-    )
-    bittensor.wallet.Wallet.add_args( status_parser )
-    bittensor.subtensor.Subtensor.add_args( status_parser )
-    bittensor.dendrite.Dendrite.add_args( status_parser )
-
-    create_parser = command_parsers.add_parser('create', help='''create''')
-    create_parser.add_argument('--name', dest="name", type=str, required=True)
-    
-    wallet_parser = command_parsers.add_parser('wallet', help='''wallet''')
-    wallet_parser.add_argument("--names", type=str, nargs='*', required=True, action='store', help="A list of nodes (hostnames) the selected command should operate on")
-    wallet_parser.add_argument('--coldkey', dest="coldkey", type=str, required=True, help='Coldkey name to load hotkeys from. All hotkeys should exist in this coldkey account.')
-    wallet_parser.add_argument("--hotkeys", type=str, nargs='*', required=False, action='store', help="A list of hotkeys to load into wallet, should align with passed names")
-
-    checkout_parser = command_parsers.add_parser('checkout', help='''configure''')
-    checkout_parser.add_argument("--names", type=str, nargs='*', required=False, action='store', help="A list of nodes (hostnames) the selected command should operate on")
-    checkout_parser.add_argument('--branch', dest="branch", type=str, required=True)
-
-    install_parser = command_parsers.add_parser('install', help='''install''')
-    install_parser.add_argument("--names", type=str, nargs='*', required=False, action='store', help="A list of nodes (hostnames) the selected command should operate on")
-
-    start_parser = command_parsers.add_parser('start', help='''start''')
-    start_parser.add_argument("--names", type=str, nargs='*', required=False, action='store', help="A list of nodes (hostnames) the selected command should operate on")
-    start_parser.add_argument('--miner', dest="miner", default='gpt2_genesis', type=str, required=False)
-
-    stop_parser = command_parsers.add_parser('stop', help='''stop''')
-    stop_parser.add_argument("--names", type=str, nargs='*', required=False, action='store', help="A list of nodes (hostnames) the selected command should operate on")
-
-    logs_parser = command_parsers.add_parser('logs', help='''logs''')
-    logs_parser.add_argument("--names", type=str, nargs='*', required=False, action='store', help="A list of nodes (hostnames) the selected command should operate on")
-    logs_parser.add_argument('--miner', dest="miner", default='gpt2_genesis', type=str, required=False)
-    
-
-    args = parser.parse_args()
-    config = bittensor.config.Config.to_config(parser); 
-    return config
-
 def connection_for_droplet( droplet ) -> Connection:
     try:
         key = paramiko.RSAKey.from_private_key_file(os.path.expanduser(KEY))
@@ -215,6 +156,13 @@ def install_bittensor( connection ):
     install_result = connection.run(install_command, hide=True, warn=True)
     logger.debug(install_result)
     return install_result
+
+def reboot_droplet( connection ):
+    reboot_command = "sudo shutdown -r now"
+    logger.debug("Rebooting droplet: {}", reboot_command)
+    reboot_result = connection.run(reboot_command, hide=True, warn=True)
+    logger.debug(reboot_result)
+    return reboot_result
 
 def is_installed( connection ) -> bool:
     check_bittensor_install_command = 'python3 -c "import bittensor"'
@@ -429,6 +377,34 @@ def start_droplet_with_name( args ):
         logger.exception( e )
 
 
+def reboot_droplet_with_name( args ):
+    try:
+        name = args[0]
+        config = args[1]    
+
+        # Find droplet.
+        droplet = droplet_with_name( name )
+        if droplet == None:
+            logger.error('<blue>{}</blue>: Not found.', name)
+            return
+        logger.success('<blue>{}</blue>: Found.', name)
+
+        # Make connection.
+        connection = connection_for_droplet( droplet )
+        if not can_connect( connection ):
+            logger.error('<blue>{}</blue>: Failed to make connection to droplet', name)
+            return
+        logger.success('<blue>{}</blue>: Made connection to droplet', name)
+
+        # Reboot droplet
+        if reboot_droplet(connection).failed:
+            logger.error('<blue>{}</blue>: Reboot failed', name)
+        logger.success('<blue>{}</blue>: Reboot success.', name)
+
+    except Exception as e:
+        logger.exception( e )
+
+
 def install_bittensor_on_droplet_with_name( args ):
     try:
         name = args[0]
@@ -620,6 +596,249 @@ def laod_wallet_for_droplet( args ):
     except Exception as e:
         logger.exception( e )
 
+def status( config ):
+
+    # Globals
+    manager = digitalocean.Manager( token = TOKEN )
+    wallet =  bittensor.wallet.Wallet( config )
+    subtensor = bittensor.subtensor.Subtensor( config )
+    meta = bittensor.metagraph.Metagraph()
+    dendrite = bittensor.dendrite.Dendrite( config )
+    config = config
+        
+    # Create table.
+    def generate_table():
+
+        nonlocal config
+        nonlocal manager
+        nonlocal subtensor
+        nonlocal dendrite
+        nonlocal meta
+
+        total_stake = 0.0
+        total_incentive = 0.0
+        total_rank = 0.0
+        total_success = 0
+        total_time = 0.0
+
+        # Fill row.
+        def get_row( droplet ): 
+
+            nonlocal total_stake
+            nonlocal total_incentive
+            nonlocal total_rank
+            nonlocal total_time
+            nonlocal total_success
+            nonlocal config
+
+            if droplet.name not in config.names:
+                return
+
+            # Setup asyncio loop.
+            connection = connection_for_droplet( droplet )
+
+            # Get connection string
+            can_connect_bool = can_connect( connection ) 
+            connect_str = '[bold green] YES' if can_connect( connection ) else '[bold red] NO'
+
+            # get hotkey
+            if can_connect_bool:
+                try:
+                    hotkey = get_hotkey( connection )
+                    hotkey_str = hotkey if hotkey != None else '[yellow] None'
+                except Exception as e:
+                    hotkey_str = '[yellow] None'
+                    logger.error('{}: Failed to pull hotkey error = {}', droplet.name, e )
+        
+            # get coldkey
+            if can_connect_bool:
+                try:
+                    coldkeypub = get_coldkeypub( connection )
+                    coldkeypub_str = coldkeypub if coldkeypub != None else '[yellow] None'
+                except Exception as e:
+                    coldkeypub_str = '[yellow] None'
+                    logger.error('{}: Failed to pull coldkey error = {}', droplet.name, e )
+
+            # get branch 
+            if can_connect_bool:
+                try:
+                    branch = get_branch( connection )
+                    branch_str = branch if branch != None else '[yellow] None'
+                except Exception as e:
+                    branch_str = '[yellow] None'
+                    logger.error('{}: Failed to pull branch error = {}', droplet.name, e )
+
+            # get install status
+            if can_connect_bool and branch != None:
+                try:
+                    installed = is_installed( connection )
+                    is_installed_str =  '[bold green] Yes' if installed else '[bold red] No'
+                except Exception as e:
+                    installed = False
+                    is_installed_str = '[bold red] No'
+                    logger.error('{}: Failed to pull install status error = {}', droplet.name, e)
+            else:
+                installed = False
+                is_installed_str = '[bold red] No'
+
+            # get miner status
+            if can_connect_bool and installed:
+                try:
+                    is_running = is_miner_running( connection )
+                    is_running_str =  '[bold green] Yes' if is_running else '[bold red] No'
+                except Exception as e:
+                    is_running = False
+                    is_running_str = '[bold red] No'
+                    logger.error('{}: Failed to pull running status: error = {}', droplet.name, e )
+            else:
+                is_running = False
+                is_running_str = '[bold red] No'
+
+            # get is_subscribed 
+            try:
+                uid = meta.hotkeys.index( hotkey )
+                is_subscribed = True
+                is_subscribed_str =  '[bold green] Yes'
+            except:
+                is_subscribed = False
+                is_subscribed_str = '[bold red] No'
+
+            # get subscription status.
+            if is_subscribed:
+                stake = meta.S[ uid ].item()
+                rank = meta.R[ uid ].item()
+                incentive = meta.I[ uid ].item()
+                lastemit = int(meta.block - meta.lastemit[ uid ])
+                lastemit = "[bold green]" + str(lastemit) if lastemit < 3000 else "[bold red]" + str(lastemit)
+                address = str(meta.addresses[uid])
+                neuron = meta.neuron_endpoints[ uid ]
+                
+                total_stake += stake
+                total_rank += rank
+                total_incentive += incentive * 14400
+
+                uid_str = str(uid)
+                stake_str = '[green]\u03C4{:.5}'.format(stake)
+                rank_str = '[green]\u03C4{:.5}'.format(rank)
+                incentive_str = '[green]\u03C4{:.5}'.format(incentive * 14400)
+                lastemit_str = str(lastemit)
+                address_str = str(address)
+
+            else:
+                uid_str = '[dim yellow] None'
+                stake_str = '[dim yellow] None'
+                rank_str = '[dim yellow] None'
+                incentive_str = '[dim yellow] None'
+                lastemit_str = '[dim yellow] None'
+                address_str = '[dim yellow] None'
+
+            # Make query and get response.
+            if installed and is_running and is_subscribed and wallet.has_hotkey and neuron != None:
+                start_time = time.time()
+                result, code = dendrite.forward_text( neurons = [neuron], x = [torch.zeros((1,1), dtype=torch.int64)] )
+                end_time = time.time()
+                code_to_string = bittensor.utils.codes.code_to_string(code.item())
+                code_color =  bittensor.utils.codes.code_to_color(code.item()) 
+                code_str =  '[' + str(code_color) + ']' + code_to_string 
+                query_time_str = '[' + str(code_color) + ']' + "" + '{:.3}'.format(end_time - start_time) + "s"
+
+                if code.item() == 0:
+                    total_success += 1
+                    total_time += end_time - start_time
+            else:
+                code_str = '[dim yellow] N/A'
+                query_time_str = '[dim yellow] N/A'
+
+            row = [ str(droplet.name), str(droplet.ip_address), str(droplet.region['name']), str(droplet.size_slug), str(connect_str), branch_str, is_installed_str, is_running_str, is_subscribed_str, address_str, uid_str, stake_str, rank_str, incentive_str, lastemit_str, query_time_str, code_str, hotkey_str, coldkeypub_str]
+            return row
+
+        # Get latest droplets.
+        droplets = manager.get_all_droplets( tag_name = [ TAG ])
+        if config.names == None:
+            config.names = [droplet.name for droplet in droplets]
+
+        subtensor.connect()
+        meta.load()
+        meta.sync(subtensor = subtensor, force = config.force)
+        meta.save()
+    
+        TABLE_DATA = []
+        with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
+            if config.live:
+                TABLE_DATA = list(executor.map(get_row, droplets))
+            else:
+                TABLE_DATA = list(tqdm(executor.map(get_row, droplets), total=len(droplets)))
+        TABLE_DATA = [row for row in TABLE_DATA if row != None ]
+        TABLE_DATA.sort(key = lambda TABLE_DATA: TABLE_DATA[0])
+
+        total_stake_str = '\u03C4{:.7}'.format(total_stake)
+        total_rank_str = '\u03C4{:.7}'.format(total_rank)
+        total_incentive_str = '\u03C4{:.7}'.format(total_incentive)
+        total_time_str = '{:.3}s'.format(total_time / len(config.names)) if total_time != 0 else '0.0s'
+        total_success_str = '[bold green]' + str(total_success) + '/[bold red]' +  str( len(config.names) - total_success )
+
+        console = Console()
+        table = Table(show_footer=False)
+        table.title = (
+            "[bold white]Miners" 
+        )
+        table.add_column("[overline white]NAME",  str(len(config.names)), footer_style = "overline white", style='white')
+        table.add_column("[overline white]IP", style='blue')
+        table.add_column("[overline white]LOC", style='yellow')
+        table.add_column("[overline white]SIZE", style='green')
+        table.add_column("[overline white]CONN", style='green')
+        table.add_column("[overline white]BRNCH", style='bold purple')
+        table.add_column("[overline white]INSTL")
+        table.add_column("[overline white]RNG")
+        table.add_column("[overline white]SUBD")
+        table.add_column("[overline white]ADDR", style='blue')
+        table.add_column("[overline white]UID", style='yellow')
+        table.add_column("[overline white]STAKE(\u03C4)", total_stake_str, footer_style = "overline white", justify='right', style='green', no_wrap=True)
+        table.add_column("[overline white]RANK(\u03C4)", total_rank_str, footer_style = "overline white", justify='right', style='green', no_wrap=True)
+        table.add_column("[overline white]INCN(\u03C4/d)", total_incentive_str, footer_style = "overline white", justify='right', style='green', no_wrap=True)
+        table.add_column("[overline white]LEmit", justify='right', no_wrap=True)
+        table.add_column("[overline white]Qry(sec)", total_time_str, footer_style = "overline white", justify='right', no_wrap=True)
+        table.add_column("[overline white]Qry(code)", total_success_str, footer_style = "overline white", justify='right', no_wrap=True)
+        table.add_column("[overline white]HOT", style='bold blue', no_wrap=False)
+        table.add_column("[overline white]COLD", style='blue', no_wrap=False)
+        table.show_footer = True
+
+        console.clear()
+        for row in TABLE_DATA:
+            table.add_row(*row)
+        table.box = None
+        table.pad_edge = False
+        table.width = None
+        table = Align.center(table)
+        return table
+
+    if config.live:
+        with Live(generate_table(), refresh_per_second=4) as live:
+            while True:
+                time.sleep(20)
+                table = generate_table()
+                live.update(generate_table())
+    else:
+        table = table = generate_table()
+        console = Console()
+        console.print(table)
+
+def weights( config ):
+    manager = digitalocean.Manager( token = TOKEN )
+    droplets = manager.get_all_droplets( tag_name = [ TAG ])
+    meta = bittensor.metagraph.Metagraph()
+    meta.load()
+    meta.sync()
+    meta.save()
+
+    if config.names == None:
+        config.names = [droplet.name for droplet in droplets]
+    iterables = [ (name, config, meta) for name in config.names]
+    with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
+        tqdm(executor.map(install_bittensor_on_droplet_with_name, iterables), total=len(iterables))
+
+
+
 def install( config ):
     manager = digitalocean.Manager( token = TOKEN )
     droplets = manager.get_all_droplets( tag_name = [ TAG ])
@@ -665,212 +884,23 @@ def logs( config ):
     with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
         tqdm(executor.map(get_logs_for_droplet_with_name, iterables), total=len(iterables))
 
+def reboot( config ):
+    manager = digitalocean.Manager( token = TOKEN )
+    droplets = manager.get_all_droplets( tag_name = [ TAG ])
+    if config.names == None:
+        config.names = [droplet.name for droplet in droplets]
+    iterables = [ (name, config) for name in config.names]
+    with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
+        tqdm(executor.map(reboot_droplet_with_name, iterables), total=len(iterables))
+
 def wallet (config):
+    manager = digitalocean.Manager( token = TOKEN )
+    droplets = manager.get_all_droplets( tag_name = [ TAG ])
+    if config.names == None:
+        config.names = [droplet.name for droplet in droplets]
     iterables = [ (name, config) for name in config.names]
     with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
         tqdm(executor.map(laod_wallet_for_droplet, iterables), total=len(iterables))
-
-def status( config ):
-
-    # Globals
-    manager = digitalocean.Manager( token = TOKEN )
-    wallet =  bittensor.wallet.Wallet( config )
-    subtensor = bittensor.subtensor.Subtensor( config )
-    meta = bittensor.metagraph.Metagraph()
-    dendrite = bittensor.dendrite.Dendrite( config )
-    config = config
-        
-    # Create table.
-    def generate_table():
-
-        nonlocal config
-        nonlocal manager
-        nonlocal subtensor
-        nonlocal dendrite
-        nonlocal meta
-
-        total_stake = 0.0
-        total_incentive = 0.0
-        total_rank = 0.0
-        total_success = 0
-        total_time = 0.0
-
-        # Fill row.
-        def get_row( droplet, ):
-
-            nonlocal total_stake
-            nonlocal total_incentive
-            nonlocal total_rank
-            nonlocal total_time
-            nonlocal total_success
-            nonlocal config
-
-            if droplet.name not in config.names:
-                return
-
-            # Setup asyncio loop.
-            connection = connection_for_droplet( droplet )
-
-            # Get connection string
-            connect_str = '[bold green] YES' if can_connect( connection ) else '[bold red] NO'
-
-            # get hotkey
-            hotkey = get_hotkey( connection )
-            hotkey_str = hotkey if hotkey != None else '[yellow] None'
-
-            # get coldkey
-            coldkeypub = get_coldkeypub( connection )
-            coldkeypub_str = coldkeypub if coldkeypub != None else '[yellow] None'
-
-            # get branch 
-            branch = get_branch( connection )
-            branch_str = branch if branch != None else '[yellow] None'
-
-            # get install status
-            if branch != None:
-                installed = is_installed( connection )
-                is_installed_str =  '[bold green] Yes' if installed else '[bold red] No'
-            else:
-                installed = False
-                is_installed_str = '[bold red] No'
-
-            # get miner status
-            if installed:
-                is_running = is_miner_running( connection )
-                is_running_str =  '[bold green] Yes' if is_running else '[bold red] No'
-            else:
-                is_running = False
-                is_running_str = '[bold red] No'
-
-            # get is_subscribed 
-            try:
-                uid = meta.hotkeys.index( hotkey )
-                is_subscribed = True
-                is_subscribed_str =  '[bold green] Yes'
-            except:
-                is_subscribed = False
-                is_subscribed_str = '[bold red] No'
-
-            # get subscription status.
-            if is_subscribed:
-                stake = meta.S[ uid ].item()
-                rank = meta.R[ uid ].item()
-                incentive = meta.I[ uid ].item()
-                lastemit = int(meta.block - meta.lastemit[ uid ])
-                lastemit = "[bold green]" + str(lastemit) if lastemit < 3000 else "[bold red]" + str(lastemit)
-                address = str(meta.addresses[uid])
-                neuron = meta.neuron_endpoints[ uid ]
-                
-                total_stake += stake
-                total_rank += rank
-                total_incentive += incentive * 14400
-
-                uid_str = str(uid)
-                stake_str = '[green]\u03C4{:.5}'.format(stake)
-                rank_str = '[green]\u03C4{:.5}'.format(rank)
-                incentive_str = '[green]\u03C4{:.5}'.format(incentive * 14400)
-                lastemit_str = str(lastemit)
-                address_str = str(address)
-
-            else:
-                uid_str = '[dim yellow] None'
-                stake_str = '[dim yellow] None'
-                rank_str = '[dim yellow] None'
-                incentive_str = '[dim yellow] None'
-                lastemit_str = '[dim yellow] None'
-                address_str = '[dim yellow] None'
-
-
-            # Make query and get response.
-            if installed and is_running and is_subscribed and wallet.has_hotkey and neuron != None:
-                start_time = time.time()
-                result, code = dendrite.forward_text( neurons = [neuron], x = [torch.zeros((1,1), dtype=torch.int64)] )
-                end_time = time.time()
-                code_to_string = bittensor.utils.codes.code_to_string(code.item())
-                code_color =  bittensor.utils.codes.code_to_color(code.item()) 
-                code_str =  '[' + str(code_color) + ']' + code_to_string 
-                query_time_str = '[' + str(code_color) + ']' + "" + '{:.3}'.format(end_time - start_time) + "s"
-
-                if code.item() == 0:
-                    total_success += 1
-                    total_time += end_time - start_time
-            else:
-                code_str = '[dim yellow] N/A'
-                query_time_str = '[dim yellow] N/A'
-
-            row = [ str(droplet.name), str(droplet.ip_address), str(droplet.region['name']), str(droplet.size_slug), str(connect_str), branch_str, is_installed_str, is_running_str, is_subscribed_str, address_str, uid_str, stake_str, rank_str, incentive_str, lastemit_str, query_time_str, code_str, hotkey_str, coldkeypub_str]
-            return row
-
-        # Get latest droplets.
-        droplets = manager.get_all_droplets( tag_name = [ TAG ])
-        if config.names == None:
-            config.names = [droplet.name for droplet in droplets]
-
-        subtensor.connect()
-        meta.load()
-        meta.sync(subtensor = subtensor, force = False)
-        meta.save()
-    
-        TABLE_DATA = []
-        with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
-            if config.live:
-                TABLE_DATA = list(executor.map(get_row, droplets))
-            else:
-                TABLE_DATA = list(tqdm(executor.map(get_row, droplets), total=len(droplets)))
-        TABLE_DATA = [row for row in TABLE_DATA if row != None ]
-        TABLE_DATA.sort(key = lambda TABLE_DATA: TABLE_DATA[0])
-
-        total_stake_str = '\u03C4{:.7}'.format(total_stake)
-        total_rank_str = '\u03C4{:.7}'.format(total_rank)
-        total_incentive_str = '\u03C4{:.7}'.format(total_incentive)
-        total_time_str = '{:.3}s'.format(total_time / len(config.names)) if total_time != 0 else '0.0s'
-        total_success_str = '[bold green]' + str(total_success) + '/[bold red]' +  str( len(config.names) - total_success )
-
-        console = Console()
-        table = Table(show_footer=False)
-        table_centered = Align.center(table)
-        table.title = (
-            "[bold white]Miners" 
-        )
-        table.add_column("[overline white]NAME",  str(len(config.names)), footer_style = "overline white", style='white')
-        table.add_column("[overline white]IP", style='blue')
-        table.add_column("[overline white]LOC", style='yellow')
-        table.add_column("[overline white]SIZE", style='green')
-        table.add_column("[overline white]CONN", style='green')
-        table.add_column("[overline white]BRNCH", style='bold purple')
-        table.add_column("[overline white]INSTL")
-        table.add_column("[overline white]RNG")
-        table.add_column("[overline white]SUBD")
-        table.add_column("[overline white]ADDR", style='blue')
-        table.add_column("[overline white]UID", style='yellow')
-        table.add_column("[overline white]STAKE(\u03C4)", total_stake_str, footer_style = "overline white", justify='right', style='green', no_wrap=True)
-        table.add_column("[overline white]RANK(\u03C4)", total_rank_str, footer_style = "overline white", justify='right', style='green', no_wrap=True)
-        table.add_column("[overline white]INCN(\u03C4/d)", total_incentive_str, footer_style = "overline white", justify='right', style='green', no_wrap=True)
-        table.add_column("[overline white]LEmit", justify='right', no_wrap=True)
-        table.add_column("[overline white]Qry(sec)", total_time_str, footer_style = "overline white", justify='right', no_wrap=True)
-        table.add_column("[overline white]Qry(code)", total_success_str, footer_style = "overline white", justify='right', no_wrap=True)
-        table.add_column("[overline white]HOT", style='bold blue', no_wrap=False)
-        table.add_column("[overline white]COLD", style='blue', no_wrap=False)
-        table.show_footer = True
-
-        console.clear()
-        for row in TABLE_DATA:
-            table.add_row(*row)
-        # table.box = None
-        table.pad_edge = False
-        table.width = None
-        return table
-
-    if config.live:
-        with Live(generate_table(), refresh_per_second=4) as live:
-            while True:
-                time.sleep(20)
-                table = generate_table()
-                live.update(generate_table())
-    else:
-        table = table = generate_table()
-        console = Console()
-        console.print(table)
 
 def configure_logging( config ):
     logger.remove()
@@ -878,6 +908,80 @@ def configure_logging( config ):
         logger.add(sys.stderr, level="TRACE")
     else:
         logger.add(sys.stderr, level="INFO")
+
+def parse_config():
+    parser = argparse.ArgumentParser(description="zz1", usage="zz1 <command> <command args>", add_help=True)
+    parser._positionals.title = "commands"
+    parser.add_argument("--tags", type=str, required=False, nargs='*', action='store', help="A list of nodes tags (hostnames tags) the selected command should operate on")
+    parser.add_argument (
+        '--debug', 
+        dest='debug', 
+        action='store_true', 
+        help='''Set debug'''
+    )
+    parser.set_defaults ( 
+        debug=False 
+    )
+    command_parsers = parser.add_subparsers( dest='command' )
+    status_parser = command_parsers.add_parser('status', help='''Show mining overview''')
+    status_parser.add_argument("--names", type=str, required=False, nargs='*', action='store', help="A list of nodes (hostnames) the selected command should operate on")
+    status_parser.add_argument (
+        '--live', 
+        dest='live', 
+        action='store_true', 
+        help='''Set live table'''
+    )
+    status_parser.set_defaults ( 
+        live=False 
+    )
+    status_parser.add_argument (
+        '--force', 
+        dest='force', 
+        action='store_true', 
+        help='''Force sync the metagraph.'''
+    )
+    status_parser.set_defaults ( 
+        force=False 
+    )
+    bittensor.wallet.Wallet.add_args( status_parser )
+    bittensor.subtensor.Subtensor.add_args( status_parser )
+    bittensor.dendrite.Dendrite.add_args( status_parser )
+
+    create_parser = command_parsers.add_parser('create', help='''create''')
+    create_parser.add_argument('--name', dest="name", type=str, required=True)
+    
+    wallet_parser = command_parsers.add_parser('wallet', help='''wallet''')
+    wallet_parser.add_argument("--names", type=str, nargs='*', required=False, action='store', help="A list of nodes (hostnames) the selected command should operate on")
+    wallet_parser.add_argument('--coldkey', dest="coldkey", type=str, required=True, help='Coldkey name to load hotkeys from. All hotkeys should exist in this coldkey account.')
+    wallet_parser.add_argument("--hotkeys", type=str, nargs='*', required=False, action='store', help="A list of hotkeys to load into wallet, should align with passed names")
+
+    checkout_parser = command_parsers.add_parser('checkout', help='''configure''')
+    checkout_parser.add_argument("--names", type=str, nargs='*', required=False, action='store', help="A list of nodes (hostnames) the selected command should operate on")
+    checkout_parser.add_argument('--branch', dest="branch", type=str, required=True)
+
+    reboot_parser = command_parsers.add_parser('reboot', help='''reboot''')
+    reboot_parser.add_argument("--names", type=str, nargs='*', required=False, action='store', help="A list of nodes (hostnames) the selected command should operate on")
+
+    install_parser = command_parsers.add_parser('install', help='''install''')
+    install_parser.add_argument("--names", type=str, nargs='*', required=False, action='store', help="A list of nodes (hostnames) the selected command should operate on")
+
+    start_parser = command_parsers.add_parser('start', help='''start''')
+    start_parser.add_argument("--names", type=str, nargs='*', required=False, action='store', help="A list of nodes (hostnames) the selected command should operate on")
+    start_parser.add_argument('--miner', dest="miner", default='gpt2_genesis', type=str, required=False)
+
+    stop_parser = command_parsers.add_parser('stop', help='''stop''')
+    stop_parser.add_argument("--names", type=str, nargs='*', required=False, action='store', help="A list of nodes (hostnames) the selected command should operate on")
+
+    weights_parser = command_parsers.add_parser('weights', help='''stop''')
+    weights_parser.add_argument("--names", type=str, nargs='*', required=False, action='store', help="A list of nodes (hostnames) the selected command should operate on")
+
+    logs_parser = command_parsers.add_parser('logs', help='''logs''')
+    logs_parser.add_argument("--names", type=str, nargs='*', required=False, action='store', help="A list of nodes (hostnames) the selected command should operate on")
+    logs_parser.add_argument('--miner', dest="miner", default='gpt2_genesis', type=str, required=False)
+    
+    args = parser.parse_args()
+    config = bittensor.config.Config.to_config(parser); 
+    return config
 
 def main( config ):
     print(bittensor.config.Config.toString( config ))
@@ -898,6 +1002,8 @@ def main( config ):
         stop( config )
     elif config.command == 'logs':
         logs( config )
+    elif config.command == 'reboot':
+        reboot( config )
 
 if __name__ == "__main__":
     config = parse_config()
