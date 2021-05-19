@@ -12,6 +12,7 @@ from rich import box
 from rich.align import Align
 from rich.console import Console
 from rich.live import Live
+from rich.columns import Columns
 from rich.measure import Measurement
 from rich.table import Table
 from rich.text import Text
@@ -31,7 +32,7 @@ nest_asyncio.apply()
 TAG = os.getenv('ZZZTAG')
 TOKEN = os.getenv('ZZZTOKEN')
 KEY = os.getenv('ZZZKEY')
-MAX_THREADS = 20
+MAX_THREADS = 100
 
 def connection_for_droplet( droplet ) -> Connection:
     try:
@@ -649,6 +650,8 @@ def status( config ):
                 except Exception as e:
                     hotkey_str = '[yellow] None'
                     logger.error('{}: Failed to pull hotkey error = {}', droplet.name, e )
+            else:
+                hotkey_str = '[yellow] None'
         
             # get coldkey
             if can_connect_bool:
@@ -658,6 +661,8 @@ def status( config ):
                 except Exception as e:
                     coldkeypub_str = '[yellow] None'
                     logger.error('{}: Failed to pull coldkey error = {}', droplet.name, e )
+            else:
+                coldkeypub_str = '[yellow] None'
 
             # get branch 
             if can_connect_bool:
@@ -667,6 +672,8 @@ def status( config ):
                 except Exception as e:
                     branch_str = '[yellow] None'
                     logger.error('{}: Failed to pull branch error = {}', droplet.name, e )
+            else:
+                branch_str = '[yellow] None'
 
             # get install status
             if can_connect_bool and branch != None:
@@ -826,18 +833,31 @@ def status( config ):
 def weights( config ):
     manager = digitalocean.Manager( token = TOKEN )
     droplets = manager.get_all_droplets( tag_name = [ TAG ])
+    if config.names == None:
+        config.names = [droplet.name for droplet in droplets]
+
     meta = bittensor.metagraph.Metagraph()
+    console = Console()
     meta.load()
     meta.sync()
     meta.save()
+    for name in config.names:
+        wallet = bittensor.wallet.Wallet( name = TAG, hotkey = name )
+        if wallet.has_hotkey:
+            try:
+                uid_i = meta.hotkeys.index( wallet.hotkey.public_key )
+                weights = meta.W[uid_i, :]
+                
+                # Chain weights column.
+                chain_weight_cols_vals = ['[blue]{}[/blue]: '.format(name)]
+                for uid_j, weight in enumerate( weights.tolist() ):
+                    if weight != 0:
+                        chain_weight_cols_vals.append( '[bold white frame]{} [dim green frame]{:.3}'.format(uid_j, weight) )
+                chain_weight_columns = Columns( chain_weight_cols_vals, equal=True, expand=True)
+                console.print(chain_weight_columns)
 
-    if config.names == None:
-        config.names = [droplet.name for droplet in droplets]
-    iterables = [ (name, config, meta) for name in config.names]
-    with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
-        tqdm(executor.map(install_bittensor_on_droplet_with_name, iterables), total=len(iterables))
-
-
+            except Exception as e:
+                logger.exception(e)
 
 def install( config ):
     manager = digitalocean.Manager( token = TOKEN )
@@ -972,7 +992,7 @@ def parse_config():
     stop_parser = command_parsers.add_parser('stop', help='''stop''')
     stop_parser.add_argument("--names", type=str, nargs='*', required=False, action='store', help="A list of nodes (hostnames) the selected command should operate on")
 
-    weights_parser = command_parsers.add_parser('weights', help='''stop''')
+    weights_parser = command_parsers.add_parser('weights', help='''weights''')
     weights_parser.add_argument("--names", type=str, nargs='*', required=False, action='store', help="A list of nodes (hostnames) the selected command should operate on")
 
     logs_parser = command_parsers.add_parser('logs', help='''logs''')
@@ -1004,6 +1024,8 @@ def main( config ):
         logs( config )
     elif config.command == 'reboot':
         reboot( config )
+    elif config.command == 'weights':
+        weights( config )
 
 if __name__ == "__main__":
     config = parse_config()
